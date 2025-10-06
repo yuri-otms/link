@@ -1,2 +1,4 @@
 docker/.env.prod
 docker/.env
+pages/node_modules
+pages/package-lock.json

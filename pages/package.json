@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build": "npx postcss ./src/main.css  --output ./dist/main.css",
+    "watch": "npx postcss ./src/main.css  --output ./dist/main.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.14",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.14"
+  }
+}
