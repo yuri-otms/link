@@ -1,36 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import yuriIcon from '/images/common/apple-touch-icon.png'
 import './App.css'
-import { Button } from "@/components/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-        <Button>Click me</Button>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className="grid gap-4">
+      <Card className="text-center">
+      <h1 className="text-2xl">yuri</h1>
+        <div className="flex justify-center">
+          <Avatar className="w-18 h-18">
+            <AvatarImage src={yuriIcon} alt="yuri" />
+            <AvatarFallback>yuri</AvatarFallback>
+          </Avatar>
+        </div>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
-      </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+      </Card>
+      <Card>
+        <CardHeader>
+          <CardTitle>
+            <a
+              href="https://qiita.com/yuri_t"
+              className="underline"
+            >
+              Qiita
+            </a>
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          test
+        </CardContent>
+      </Card>
+    </div>
   )
 }
 
