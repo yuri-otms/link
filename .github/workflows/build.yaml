@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: リポジトリのチェックアウト
+        uses: actions/checkout@v4
+      - name: Node.js環境のセットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          working-directory: ./pages/
+      - name: 依存関係のインストール
+        run: npm install
+      - name: Viteのプロジェクトのビルド
+        run: npm run build
+        working-directory: ./pages/
+      
