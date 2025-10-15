@@ -1,5 +1,4 @@
 import yuriIcon from '/images/common/apple-touch-icon.png'
-import './App.css'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
   Card,
@@ -13,8 +12,8 @@ import { Link } from "@/components/ui/link"
 function App() {
 
   return (
-    <div className="w-full max-w-lg mx-auto space-y-4">
-      <Card>
+    <div className="w-full max-w-lg mx-auto space-y-3 p-4">
+      <Card className="gap-4">
       <h1 className="text-2xl text-center">yuri</h1>
         <div className="flex justify-center">
           <Avatar className="w-18 h-18">
@@ -23,8 +22,8 @@ function App() {
           </Avatar>
         </div>
         <CardContent>
-          <p>
-            未経験で37歳から2年間バックエンドエンジニア<br className="sm:hidden" />(退職済み) <br />
+          <p className="text-sm">
+            未経験で37歳から2年間バックエンドエンジニア(退職済み) <br />
             不登校、ひきこもり、長期無職、対人恐怖（社交不安障害）、短期離職の繰り返しから、自分の夢を叶える方法を模索する人。
           </p>
         </CardContent>
@@ -41,7 +40,6 @@ function App() {
           <Link href="https://qiita.com/yuri_t/items/2b7b29b58ef981198fd8">
             元ひきこもり37歳業務未経験女性がバックエンドエンジニアとして地方で採用されるまで
           </Link>
-              など
         </CardContent>
       </Card>
       <Card>
