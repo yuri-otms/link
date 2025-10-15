@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
+          cache-dependency-path: ./pages/package-lock.json
       - name: 依存関係のインストール
         run: npm install
         working-directory: ./pages/
