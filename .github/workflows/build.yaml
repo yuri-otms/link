@@ -24,4 +24,19 @@ jobs:
       - name: Viteのプロジェクトのビルド
         run: npm run build
         working-directory: ./pages/
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-cation@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+      
+      - name: Transfer Build Artifacts (rsync)
+        uses: sftp-upload/action@v1.0.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: ./pages/dist
+          target: '/var/docker/link/pages/dist'
+
       
