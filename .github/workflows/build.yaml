@@ -30,7 +30,7 @@ jobs:
         with:
           switches: -avzr --delete
           path: ${{ secrets.VPS_LINK_SOURCE}}
-          remort_path: ${{ secrets.VPS_LINK_TARGET}}
-          remort_host: ${{ secrets.VPS_HOST }}
-          remort_user: ${{ secrets.VPS_USERNAME }}
+          remote_path: ${{ secrets.VPS_LINK_TARGET}}
+          remote_host: ${{ secrets.VPS_HOST }}
+          remote_user: ${{ secrets.VPS_USERNAME }}
           remote_key: ${{ secrets.SSH_PRIVATE_KEY}}
