@@ -25,18 +25,12 @@ jobs:
         run: npm run build
         working-directory: ./pages/
 
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@7.1.0
         with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-      
-      - name: Transfer Build Artifacts (rsync)
-        uses: sftp-upload/action@v1.0.0
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: ./pages/dist
-          target: '/var/docker/link/pages/dist'
-
-      
+          switches: -avzr --delete
+          path: ${{ secrets.VPS_LINK_SOURCE}}
+          remort_path: ${{ secrets.VPS_LINK_TARGET}}
+          remort_host: ${{ secrets.VPS_HOST }}
+          remort_user: ${{ secrets.VPS_USERNAME }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY}}
