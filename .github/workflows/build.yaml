@@ -26,7 +26,7 @@ jobs:
         working-directory: ./pages/
 
       - name: Install SSH Key
-        uses: shimataro/ssh-key-cation@v2
+        uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
       
