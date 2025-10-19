@@ -62,6 +62,26 @@ function App() {
       <Card>
         <CardHeader>
           <CardTitle>
+            <Link href="https://ko.sksk.fun/">
+              サクッと作文　韓国語
+            </Link>
+          </CardTitle>
+          <CardDescription>
+            未経験就活時のポートフォリオ　韓国語を作文して学ぶWebアプリ
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Link href="https://github.com/yuri-otms/sksk_ko">
+            yuri-otms/sksk_ko (GitHub)
+          </Link><br />
+          <Link href="https://qiita.com/yuri_t/items/747a4369bc25c5561139">
+            【個人開発】韓国語の文法を復習するアプリ「サクッと作文　韓国語」のデモ版をリリースしました #Flask - Qiita
+          </Link>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader>
+          <CardTitle>
             <Link href="https://note.com/omuraisu_kk">
               オムライス | note
             </Link>
