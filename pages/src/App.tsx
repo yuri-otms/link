@@ -10,6 +10,66 @@ import {
 import { Link } from "@/components/ui/link"
 
 function App() {
+  const message: number = "Hello World!";
+  console.log(message);
+
+  const linkCards = [
+    {
+      cardTitle: 'Qiita',
+      titleLink: 'https://qiita.com/yuri_t',
+      description: '',
+      links: [
+        {
+          linkTitle: '元ひきこもり37歳業務未経験女性がバックエンドエンジニアとして地方で採用されるまで',
+          linkUrl: 'https://qiita.com/yuri_t/items/2b7b29b58ef981198fd8'
+        }
+      ],
+    },
+    {
+      cardTitle: 'yuri | note',
+      titleLink: 'https://note.com/yuri_bbr',
+      description: '37歳でWebエンジニアになる前・なった後の記録',
+      links: [
+        {
+          linkTitle: '私のプログラミング歴 - 34歳で学習開始から37歳で就職するまで',
+          linkUrl: 'https://note.com/yuri_bbr/n/n805a24e68d8c'
+        }
+      ],
+    },
+    {
+      cardTitle: 'サクッと作文　韓国語',
+      titleLink: 'https://ko.sksk.fun/',
+      description: '未経験就活時のポートフォリオ　韓国語を作文して学ぶWebアプリ(Python/Flask)',
+      links: [
+        {
+          linkTitle: 'yuri-otms/sksk_ko (GitHub)',
+          linkUrl: 'https://github.com/yuri-otms/sksk_ko'
+        },
+        {
+          linkTitle: '【個人開発】韓国語の文法を復習するアプリ「サクッと作文　韓国語」のデモ版をリリースしました #Flask - Qiita',
+          linkUrl: 'https://qiita.com/yuri_t/items/747a4369bc25c5561139'
+        }
+      ],
+    },
+    {
+      cardTitle: 'オムライス | note',
+      titleLink: 'https://note.com/omuraisu_kk',
+      description: '38歳でマッチングアプリ婚した記録。結婚前・結婚後',
+      links: [
+        {
+          linkTitle: '彼氏いない歴17年の38歳女性が婚活して結婚するまでに読んだコミックエッセイ12選｜オムライス',
+          linkUrl: 'https://note.com/omuraisu_kk/n/nac1f7bdf2f3b'
+        }
+      ],
+    },
+    {
+      cardTitle: 'yuri（@lstliauou） / X',
+      titleLink: 'https://x.com/lstliauou',
+      description: 'ポストはリプライ含めてこまめに削除しています。',
+      links: [],
+    },
+  ];
+
 
   return (
     <div className="w-full max-w-lg mx-auto space-y-3 p-4">
@@ -28,86 +88,35 @@ function App() {
           </p>
         </CardContent>
       </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>
-            <Link href="https://qiita.com/yuri_t">
-              Qiita
-            </Link>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Link href="https://qiita.com/yuri_t/items/2b7b29b58ef981198fd8">
-            元ひきこもり37歳業務未経験女性がバックエンドエンジニアとして地方で採用されるまで
-          </Link>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>
-            <Link href="https://note.com/yuri_bbr">
-              yuri | note
-            </Link>
-          </CardTitle>
-          <CardDescription>
-            37歳でWebエンジニアになる前・なった後の記録
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Link href="https://note.com/yuri_bbr/n/n805a24e68d8c">
-            私のプログラミング歴 - 34歳で学習開始から37歳で就職するまで
-          </Link>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>
-            <Link href="https://ko.sksk.fun/">
-              サクッと作文　韓国語
-            </Link>
-          </CardTitle>
-          <CardDescription>
-            未経験就活時のポートフォリオ　韓国語を作文して学ぶWebアプリ
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Link href="https://github.com/yuri-otms/sksk_ko">
-            yuri-otms/sksk_ko (GitHub)
-          </Link><br />
-          <Link href="https://qiita.com/yuri_t/items/747a4369bc25c5561139">
-            【個人開発】韓国語の文法を復習するアプリ「サクッと作文　韓国語」のデモ版をリリースしました #Flask - Qiita
-          </Link>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>
-            <Link href="https://note.com/omuraisu_kk">
-              オムライス | note
-            </Link>
-          </CardTitle>
-          <CardDescription>
-            38歳でマッチングアプリ婚した記録。結婚前・結婚後
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Link href="https://note.com/omuraisu_kk/n/nac1f7bdf2f3b">
-            彼氏いない歴17年の38歳女性が婚活して結婚するまでに読んだコミックエッセイ12選｜オムライス
-          </Link>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>
-            <Link href="https://x.com/lstliauou">
-              yuri（@lstliauou） / X
-            </Link>
-          </CardTitle>
-          <CardDescription>
-            ポストはリプライ含めてこまめに削除しています。
-          </CardDescription>
-        </CardHeader>
-      </Card>
+      {
+        linkCards.map(elem =>
+          <Card>
+            <CardHeader>
+              <CardTitle>
+                <Link href={elem.titleLink}>
+                  {elem.cardTitle}
+                </Link>
+              </CardTitle>
+              <CardDescription>
+                {elem.description}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul>
+                {
+                  elem.links.map(elem =>
+                    <li>
+                      <Link href={elem.linkUrl}>
+                        {elem.linkTitle}
+                      </Link>
+                    </li>
+                  )
+                }
+              </ul>
+            </CardContent>
+          </Card>
+        )
+      }
     </div>
   )
 }
