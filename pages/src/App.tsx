@@ -10,8 +10,6 @@ import {
 import { Link } from "@/components/ui/link"
 
 function App() {
-  const message: number = "Hello World!";
-  console.log(message);
 
   const linkCards = [
     {
