@@ -36,7 +36,7 @@ function App() {
     },
     {
       cardTitle: 'サクッと作文　韓国語',
-      titleLink: 'https://ko.sksk.fun/',
+      titleLink: 'https://ko.skskfun.com/',
       description: '未経験就活時のポートフォリオ　韓国語を作文して学ぶWebアプリ(Python/Flask)',
       links: [
         {
