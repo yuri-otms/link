@@ -50,17 +50,6 @@ function App() {
       ],
     },
     {
-      cardTitle: 'オムライス | note',
-      titleLink: 'https://note.com/omuraisu_kk',
-      description: '38歳でマッチングアプリ婚した記録。結婚前・結婚後',
-      links: [
-        {
-          linkTitle: '彼氏いない歴17年の38歳女性が婚活して結婚するまでに読んだコミックエッセイ12選｜オムライス',
-          linkUrl: 'https://note.com/omuraisu_kk/n/nac1f7bdf2f3b'
-        }
-      ],
-    },
-    {
       cardTitle: 'yuri（@lstliauou） / X',
       titleLink: 'https://x.com/lstliauou',
       description: 'ポストはリプライ含めてこまめに削除しています。',
