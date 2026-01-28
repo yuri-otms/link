@@ -72,6 +72,12 @@ function App() {
       ],
     },
     {
+      cardTitle: 'yuri-otms (yuri)GitHub',
+      titleLink: 'https://github.com/yuri-otms',
+      description: '個人サイト、「サクッと作文　韓国語」等のコード置いてます',
+      links: [],
+    },
+    {
       cardTitle: 'yuri（@lstliauou） / X',
       titleLink: 'https://x.com/lstliauou',
       description: 'ポストはリプライ含めてこまめに削除しています。',
