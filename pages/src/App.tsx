@@ -35,6 +35,28 @@ function App() {
       ],
     },
     {
+      cardTitle: '身軽な生活を目指すブログ',
+      titleLink: 'https://yuri-l.hatenablog.com/',
+      description: 'なるべくものを減らしたり、デジタルミニマリストを目指したり、カフェインレス生活を目指したりのコミックエッセイ',
+      links: [],
+    },
+    {
+      cardTitle: '80歳まで続けるサイト',
+      titleLink: 'https://skskfun.com/',
+      description: '個人サイト。CMSで構築。過去のコミックエッセイ、ひきこもり脱出のヒント集など。',
+      links: [
+        {
+          linkTitle: '個人サイト開発日記',
+          linkUrl: 'https://skskfun.com/contents/log'
+        },
+
+        {
+          linkTitle: 'ひきこもりの時(コミックエッセイ)',
+          linkUrl: 'https://skskfun.com/contents/hiki'
+        }
+      ],
+    },
+    {
       cardTitle: 'サクッと作文　韓国語',
       titleLink: 'https://ko.skskfun.com/',
       description: '未経験就活時のポートフォリオ　韓国語を作文して学ぶWebアプリ(Python/Flask)',
@@ -48,6 +70,12 @@ function App() {
           linkUrl: 'https://qiita.com/yuri_t/items/747a4369bc25c5561139'
         }
       ],
+    },
+    {
+      cardTitle: 'yuri-otms (yuri)GitHub',
+      titleLink: 'https://github.com/yuri-otms',
+      description: '個人サイト、「サクッと作文　韓国語」等のコード置いてます',
+      links: [],
     },
     {
       cardTitle: 'yuri（@lstliauou） / X',
