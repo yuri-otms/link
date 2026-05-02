@@ -13,6 +13,17 @@ function App() {
 
   const linkCards = [
     {
+      cardTitle: 'yuri | note',
+      titleLink: 'https://note.com/lstliauou',
+      description: '不登校・ひきこもり経験から、のんびり幸せに暮らせるようになるまで',
+      links: [
+        {
+          linkTitle: '【自己紹介】不登校・ひきこもりから、幸せに生きられるようになった',
+          linkUrl: 'https://note.com/lstliauou/n/ne318ecabb6b3'
+        }
+      ],
+    },
+    {
       cardTitle: 'Qiita',
       titleLink: 'https://qiita.com/yuri_t',
       description: '',
@@ -24,7 +35,7 @@ function App() {
       ],
     },
     {
-      cardTitle: 'yuri | note',
+      cardTitle: 'ゆり | note',
       titleLink: 'https://note.com/yuri_bbr',
       description: '37歳でWebエンジニアになる前・なった後の記録',
       links: [
